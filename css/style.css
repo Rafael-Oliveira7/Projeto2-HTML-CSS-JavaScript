@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Yantramanav;
+    src: url(../fontes/Yantramanav-Light.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Yantramanav;
+}
+h1{
+    font-size: 54px;
+}
+h2{
+    font-size: 64px;
+    color: #fff;
+    letter-spacing: 1.34px;
+}
+h3{
+    font-size: 54px;
+    color: #fff;
+    letter-spacing: 1.13px;
+}
+h5{
+    font-size: 32px;
+    color: #fff;
+    letter-spacing: 0.67px;
+    font-weight: lighter;
+}
+p{
+    font-size: 18px;
+    color: #B5B5B5;
+}
+p#negrito{
+    font-weight: bold;
+}
+
+/*-----------------------------Formatação Primeira Página---------------------------------*/
+header#pagina-principal{
+    background: radial-gradient(circle, #1A1A1A 30%, #2C2C2C 99%);
+    height: 768px;
+}
+header#pagina-principal img{
+    margin-top: 27px;
+    margin-left: 43px;
+}
+section#tema{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 125px;
+    width: 60%;
+    text-align: center;
+}
+section#tema h1{
+    color: #fff;
+    font: 54px/70px Yantramanav;
+    letter-spacing: 1.13px;
+    text-transform: capitalize;
+}
+section#tema p{
+    letter-spacing: 0px;
+    color: #B5B5B5;
+    opacity: 1;
+    margin: 0 auto;
+    margin-top: 17px;
+    width: 46%;
+}
+nav#menu ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 167px;
+    height: 54px;
+}
+li.comprar{
+    background-color: #F89D24;
+    border: none;
+    width: 169px;
+    height: 56px;
+    margin-left: 30px;
+}
+.btn{
+    opacity: 1;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 18px 20px;
+}
+/*-----------------------------Formatação Segunda Página---------------------------------*/
+div#borda{
+    border: solid 1px #FEC024;
+    height: 206px;
+    width: 205px;
+    position: absolute;
+    border-top: none;
+}
+section#clientes{
+    background: radial-gradient(closest-side at 96% 11%, #2C2C2C 30%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+    height: 768px;
+}
+div#grid-clientes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+div#container-sc{
+    display: flex;
+    flex-direction: column;
+    margin-top: 123px;
+    margin-left: 70px;
+}
+div#container-sc div h2{
+    width: 47%;
+}
+div#container-sc div p{
+    width: 56%;
+}
+div#container-sc div ul{
+    display: flex;
+    margin-top: 89px;
+}
+div#grid-xp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 97px;
+}
+.container-xp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6E6E6E;
+    border-radius: 5px;
+    height: 271px;
+    width: 85%;
+}
+.container-t{
+    width: 85%;
+    margin-top: 27px;
+}
+.container-t h4{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #F89D24;
+}
+.container-t p{
+    font-size: 16px;
+}
+/*-----------------------------Formatação Terceira Página---------------------------------*/
+section#contratar-curso img{
+    position: absolute;
+    opacity: 0.33;
+    width: 100;
+}
+section#contratar-curso{
+    height: 372px;
+    background-color: rgba(0, 0, 0, 0.952);
+    background-image: url(../svg/Grupo\ 34.png);
+}
+div#grid-contrate{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+div#grid-contrate h3{
+    text-transform: capitalize;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    margin-top: 108px;
+}
+div#container-valor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F89D24;
+    height: 296px;
+    margin-top: 42px;
+}
+div#container-valor div#btn-fcurso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 203px;
+    height: 56px;
+    margin-top: 29px;
+}
+div#container-valor div#btn-fcurso a{
+    color: #F89D24;
+    font-weight: bold;
+    padding: 17px 54px;
+}
+
+/*-----------------------------Formatação Quarta Página---------------------------------*/
+section#competencias{
+    background-image: url(../imagens/teacher\ bnw@2x.png);
+    height: 611px;
+    background-size: cover
+}
