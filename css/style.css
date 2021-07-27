@@ -10,13 +10,14 @@
 }
 
 body{
+    background-color: #000;
     font-family: Yantramanav;
 }
 h1{
     font-size: 54px;
 }
 h2{
-    font-size: 64px;
+    font-size: clamp(56px, 36px + 2vw, 64px);
     color: #fff;
     letter-spacing: 1.34px;
 }
@@ -26,16 +27,16 @@ h3{
     letter-spacing: 1.13px;
 }
 h5{
-    font-size: 32px;
+    font-size: clamp(22px, 3px + 2vw, 32px);
     color: #fff;
     letter-spacing: 0.67px;
     font-weight: lighter;
 }
 p{
-    font-size: 18px;
+    font-size: clamp(14px, 4px + 1vw, 18px);
     color: #B5B5B5;
 }
-p#negrito{
+p.negrito{
     font-weight: bold;
 }
 
@@ -75,7 +76,7 @@ nav#menu ul{
     justify-content: center;
     margin-top: 100px;
 }
-li{
+li.b{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +85,7 @@ li{
     width: 167px;
     height: 54px;
 }
-li.comprar{
+.b.comprar{
     background-color: #F89D24;
     border: none;
     width: 169px;
@@ -102,12 +103,13 @@ li.comprar{
     padding: 18px 20px;
 }
 /*-----------------------------Formatação Segunda Página---------------------------------*/
-div#borda{
+.borda{
     border: solid 1px #FEC024;
     height: 206px;
     width: 205px;
     position: absolute;
     border-top: none;
+    margin-left: 120px;
 }
 section#clientes{
     background: radial-gradient(closest-side at 96% 11%, #2C2C2C 30%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
@@ -123,13 +125,13 @@ div#container-sc{
     display: flex;
     flex-direction: column;
     margin-top: 123px;
-    margin-left: 70px;
+    margin-left: 47px;
 }
 div#container-sc div h2{
     width: 47%;
 }
 div#container-sc div p{
-    width: 56%;
+    width: 63%;
 }
 div#container-sc div ul{
     display: flex;
@@ -216,4 +218,163 @@ section#competencias{
     background-image: url(../imagens/teacher\ bnw@2x.png);
     height: 611px;
     background-size: cover
+}
+div#grid-comp{
+    display: grid;
+    grid-template-columns: 25% 38.4%;
+    justify-content: center;
+}
+div#container-comp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #686868;
+    margin-top: 127px;
+    height: 362px;
+}
+div#container-comp div{
+    width: 80%;
+    margin-left: 60px;
+}
+div#container-comp-desc{
+    background-color: #262626;
+    margin-top: 127px;
+}
+div#container-comp-desc div p{
+    width: 58%;
+    margin: 0 auto;
+    margin-top: 72px;
+    color: #fff;
+    font-size: clamp(10px, 4px + 1vw, 18px);
+}
+div#container-comp-desc ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 58%;
+    margin: 0 auto;
+}
+div#container-comp-desc ul li{
+    border: none;
+    width: 120px;
+}
+div#container-comp-desc ul li a{
+    font-size: clamp(10px, 8px + 1vw, 14px);
+    padding: 0;
+}
+div#container-comp-desc ul li a#comprar-agr{
+    color: #F89D24;
+}
+/*-----------------------------Formatação Quinta Página---------------------------------*/
+section#professores{
+    background: radial-gradient(circle, #1A1A1A 30%, #2C2C2C 99%);
+    height: 1640px;
+    width: 100%;
+}
+section#professores h2{
+    position: relative;
+    width: 22%;
+    margin-left: 196px;
+    margin-bottom: 75px;
+    padding-top: 123px;
+}
+div#grid-professores{
+    display: grid;
+    grid-template-columns: 24.3% 24.3% 24.3%;
+    justify-content: center;
+    gap: 20px;
+}
+.container-prof{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #6E6E6E;
+    border-radius: 5px;
+}
+.container-prof img{
+    margin-bottom: 18px;
+    margin-top: 24px;
+    width: 100%;
+}
+.container-prof div{
+    margin-bottom: 13px;
+}
+.container-prof span{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #F89D24;
+    font-weight: bold;
+}
+.container-prof p{
+    width: 85%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+section#professores ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 78px;
+}
+/*-------------------------------------------Slide---------------------------------*/
+section#slide{
+    background-image: url(../imagens/opinion.png);
+    height: 768px;
+    background-size: 100% 100%;
+}
+/*---------------------------------Formatação Sétima Página-------------------------*/
+section#capacidade{
+    background: radial-gradient(closest-side at 96% 11%, #2C2C2C 30%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+    height: 768px;
+}
+div#grid-capacidade{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+div#container-cap{
+    display: flex;
+    flex-direction: column;
+    margin-top: 123px;
+    margin-left: 47px;
+}
+div#container-cap div h2{
+    position: relative;
+    width: 58%;
+    margin-bottom: 20px;
+}
+div#container-cap div p{
+    width: 62%;
+}
+div#container-cap ul{
+    display: flex;
+    margin-top: 62px;
+}
+div#lista-cap{
+    margin-top: 192px;
+    width: 70%;
+    margin-left: 50px;
+}
+div#lista-cap ul{
+    list-style-type: circle;
+}
+div#lista-cap ul li{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #F89D24;
+}
+div#lista-cap ul li{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #F89D24;
+    margin-bottom: 7px;
+}
+div#lista-cap ul p{
+    font-size: 16px;
+    margin-bottom: 32px;
 }
