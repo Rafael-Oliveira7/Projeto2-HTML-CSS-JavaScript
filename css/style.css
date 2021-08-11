@@ -42,7 +42,7 @@ p.negrito{
 
 /*-----------------------------Formatação Primeira Página---------------------------------*/
 header#pagina-principal{
-    background: radial-gradient(circle, #1A1A1A 30%, #2C2C2C 99%);
+    background: radial-gradient(circle at 96% 11%,#2c2c2c 0%,#1a1a1a 65%);
     height: 768px;
 }
 header#pagina-principal img{
@@ -84,6 +84,7 @@ li.b{
     border-radius: 5px;
     width: 167px;
     height: 54px;
+    cursor: pointer;
 }
 .b.comprar{
     background-color: #F89D24;
@@ -112,7 +113,7 @@ li.b{
     margin-left: 120px;
 }
 section#clientes{
-    background: radial-gradient(closest-side at 96% 11%, #2C2C2C 30%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+    background: radial-gradient(circle at 96% 11%,#2c2c2c 0%,#1a1a1a 65%);
     height: 768px;
 }
 div#grid-clientes{
@@ -120,6 +121,7 @@ div#grid-clientes{
     grid-template-columns: 1fr 1fr;
     width: 80%;
     margin: 0 auto;
+    gap: 20px;
 }
 div#container-sc{
     display: flex;
@@ -139,7 +141,7 @@ div#container-sc div ul{
 }
 div#grid-xp{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 42% 42%;
     gap: 32px;
     margin-top: 97px;
 }
@@ -151,26 +153,27 @@ div#grid-xp{
     border: 1px solid #6E6E6E;
     border-radius: 5px;
     height: 271px;
-    width: 85%;
+    width: 100%;
+}
+.container-xp div.img-logo{
+    width: 39%;
+}
+.container-xp img{
+    width: 100%;
 }
 .container-t{
     width: 85%;
     margin-top: 27px;
 }
 .container-t h4{
-    font-size: 14px;
+    font-size: clamp(10px, 0px + 1vw, 14px);
     text-transform: uppercase;
     color: #F89D24;
 }
 .container-t p{
-    font-size: 16px;
+    font-size: clamp(12px, 2px + 1vw, 16px);
 }
 /*-----------------------------Formatação Terceira Página---------------------------------*/
-section#contratar-curso img{
-    position: absolute;
-    opacity: 0.33;
-    width: 100;
-}
 section#contratar-curso{
     height: 372px;
     background-color: rgba(0, 0, 0, 0.952);
@@ -211,6 +214,7 @@ div#container-valor div#btn-fcurso a{
     color: #F89D24;
     font-weight: bold;
     padding: 17px 54px;
+    cursor: pointer;
 }
 
 /*-----------------------------Formatação Quarta Página---------------------------------*/
@@ -266,7 +270,7 @@ div#container-comp-desc ul li a#comprar-agr{
 }
 /*-----------------------------Formatação Quinta Página---------------------------------*/
 section#professores{
-    background: radial-gradient(circle, #1A1A1A 30%, #2C2C2C 99%);
+    background: radial-gradient(circle at 96% 11%,#2c2c2c 0%,#1a1a1a 65%);
     height: 1640px;
     width: 100%;
 }
@@ -321,10 +325,65 @@ section#slide{
     background-image: url(../imagens/opinion.png);
     height: 768px;
     background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.contencao{
+    width: 90%;
+    height: 562px;
+}
+#imagembg{
+    width: 100%;
+    height: 562px;
+    background-size: cover;
+    transition: 1s;
+}
+.anterior, .proximo{
+    position:relative;
+    margin-top: -355px;
+    width: 65px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.034);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 120px;
+    cursor: pointer;
+    transition: 1s;
+}
+.anterior{
+    float: left;
+}
+.proximo{
+    float: right;
+}
+.anterior:hover{
+    background-color: rgba(255, 255, 255, 0.733);
+}
+.proximo:hover{
+    background-color: rgba(255, 255, 255, 0.733);
+}
+ul2{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+ul2 li2{
+    background: #131B22;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.selected{
+    background: #c0392b;
 }
 /*---------------------------------Formatação Sétima Página-------------------------*/
 section#capacidade{
-    background: radial-gradient(closest-side at 96% 11%, #2C2C2C 30%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+    background: radial-gradient(circle at 96% 11%,#2c2c2c 0%,#1a1a1a 65%);
     height: 768px;
 }
 div#grid-capacidade{
@@ -377,4 +436,139 @@ div#lista-cap ul li{
 div#lista-cap ul p{
     font-size: 16px;
     margin-bottom: 32px;
+}
+/*--------------------------------Ultima Página-------------------------------------*/
+section#negociando{
+    height: 768px;
+    background: url(../imagens/negociando.png)left no-repeat , linear-gradient(to right, #1A1A1A , #2C2C2C) ;
+    background-size: 80% 100% , 100%;
+    background-position: -300px, 0px;
+}
+div#container-neg{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+div#container-neg h2{
+    position: relative;
+    width: 36%;
+    margin-bottom: 20px;
+    margin-top: 123px;
+}
+div#container-neg p{
+    width: 50.8%;
+}
+div#container-neg ul{
+    display: flex;
+    margin-top: 70px;
+}
+section#negociando .borda{
+    position: absolute;
+    margin-left: 1041px;
+}
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.74);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container.mostrar{
+    display: flex;
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #232323;
+    width: 35%;
+    min-width: 300px;
+    height: 80%;
+    padding: 40px;
+    position: relative;
+    font-family: lato;
+}
+.modal h3{
+    font-size: 38px;  
+    text-transform: uppercase;
+    color: #F89D24;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.modal p{
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.modal form input{
+    width: 328px;
+    height: 56px;
+    border: 1px solid #F89D24;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.modal form input::placeholder{
+    color:#F89D24;
+}
+.modal form input[type = text], .modal form input[type = email]{
+    font-size: 16px;
+    padding-left: 16px;
+    color: #F89D24;
+}
+.modal form input[type = checkbox]{
+    width: 15px;
+    height: 16px;
+}
+.modal form label{
+    margin-top: -34px;
+    margin-left: 20px;
+    color: #E1E1E1;
+}
+.modal form label span{
+    text-decoration: underline;
+}
+.modal form input[type = submit]{
+    width: 230px;
+    height: 56px;
+    margin: 0 auto;
+    background-color: #F89D24;
+    font-size: 14px;
+    font-family: lato;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.mostrar .modal{
+    animation: modal .3s;
+}
+.fechar{
+    position: absolute;
+    top: 31px;
+    right: 35px;
+    font-size: 35px;
+    color: #707070;
+    background-color: #232323;
+    cursor: pointer;
+    border: none;
+}
+form#tenho-interesse{
+    display: grid;
+    gap: 15px;
 }
