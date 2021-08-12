@@ -14,7 +14,7 @@
 </head>
 <body>
     <header id="pagina-principal">
-        <div>
+        <div id="logo-p">
             <img src="../imagens/LOGOSYNAPSE_simbolo_laranja.png" alt="Logo da Empresa">
         </div>
         <section id="tema">
@@ -187,13 +187,42 @@
         </ul>
     </section>
     <section id="slide">
-        <div class="contencao">
-            <div id="imagembg"></div>
-            <div class="anterior" onclick="anterior()"><</div>
-            <div class="proximo" onclick="proximo()">></div>
+        <div class="slide-container">
+            <div id="container-slide">
+                <div id="borda-dir"></div>
+                <div id="borda-esq"></div>
+                <div class="texto-Slides fade">
+                  <p> "Quando eu fiz esse curso, eu fui muito feliz e eu quero fazer de novo agora porque é muito bom mesmo 1"</p>
+                  <cite>Fulano de tal, <br> médico muito conceituado</cite>
+                </div>
+              
+                <div class="texto-Slides fade">
+                    <p> "Quando eu fiz esse curso, eu fui muito feliz e eu quero fazer de novo agora porque é muito bom mesmo 2"</p>
+                    <cite>Fulano de tal, <br> médico muito conceituado</cite>
+                </div>
+              
+                <div class="texto-Slides fade">
+                    <p> "Quando eu fiz esse curso, eu fui muito feliz e eu quero fazer de novo agora porque é muito bom mesmo 3"</p>
+                    <cite>Fulano de tal, <br> médico muito conceituado</cite>
+                </div>
+
+                <div class="texto-Slides fade">
+                    <p> "Quando eu fiz esse curso, eu fui muito feliz e eu quero fazer de novo agora porque é muito bom mesmo 4"</p>
+                    <cite>Fulano de tal, <br> médico muito conceituado</cite>
+                </div>
+              
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+    
+              <div class="dots-slide">
+                <span class="dots" onclick="currentSlide(1)"></span> 
+                <span class="dots" onclick="currentSlide(2)"></span> 
+                <span class="dots" onclick="currentSlide(3)"></span>
+                <span class="dots" onclick="currentSlide(4)"></span> 
+            </div>
+            </div>
         </div>
-        
-        <ul2 id="botoes"></ul2>
     </section>
     <section id="capacidade">
         <div class="borda"></div>
@@ -228,24 +257,35 @@
         </div>
     </section>
     <section id="negociando">
-        <div class="borda"></div>
         <div id="container-neg">
             <div>
+                <div class="borda"></div>
                 <h2>Eu estou apto?</h2>
-            </div>
-            <div>
-                <p><strong>Esta seção visa explicar quem é a persona que o curso quer atingir. </strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor</p>
+                <p class="negrito">Esta seção visa explicar quem é a persona que o curso quer atingir.</p> 
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor</p>
             </div>
             <div>
                 <ul>
                     <li class="b modal-t"><a class="btn">Tenho Interesse</a></li>
-                    <li class="b comprar"><a href="" class="btn">Comprar Agora</a></li>
+                    <li class="b comprar"><a class="btn">Comprar Agora</a></li>
                 </ul>
              </div>
         </div>
     </section>
-    
+    <footer>
+        <div id="container-final">
+            <div>
+                <p><strong>Synapse ₢ Todos os direitos reservados</strong></p>
+            </div>
+            <div>
+                <ul>
+                    <li>Texto adicional1</li>
+                    <li>Texto adicional2</li>
+                    <li>Texto adicional3</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <div id="modal-id" class="modal-container">
         <div class="modal">

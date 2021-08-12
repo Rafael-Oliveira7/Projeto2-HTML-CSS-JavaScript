@@ -1,40 +1,34 @@
-window.load = slide(1);
+//---------------------------------------Slides---------------------------
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function mudaFoto (foto){
-	document.getElementById("foto").src = foto;
-}
-
-var bgNumber = 1;
-
-function slide(n){
-	var allbg = 4;
-	document.getElementById('imagembg').style.backgroundImage = "url('../imagens/"+n+".jpg')";
-	botoes(n, allbg);
-	bgNumber=n;
-}
-function anterior(){
-	if(bgNumber>1){
-		bgNumber--;
-		slide(bgNumber);
-	}
-}
-function proximo(){
-	if(bgNumber<6){
-		bgNumber++;
-		slide(bgNumber);
-	}
-}
-function botoes(n, m){
-	document.getElementById('botoes').innerHTML = "";
-	for(a=1;a<=m;a++){
-		if(a==n){
-			document.getElementById('botoes').innerHTML += `<li2 class='selected' onclick = 'slide(${a})'></li2>`;
-		}else{
-			document.getElementById('botoes').innerHTML += "<li2 onclick ='slide("+a+")'></li2>";
-		}
-	}
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("texto-Slides");
+  var dots = document.getElementsByClassName("dots");
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "flex";
+  dots[slideIndex - 1].className += " active";
+}
 //-------------------------Modal----------------------------------
 function iniciaModal(modalID){
 	const modal = document.getElementById(modalID);
