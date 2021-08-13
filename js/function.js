@@ -1,3 +1,14 @@
+//------------------------------------Descrições de Competencias-------------------
+
+
+function showDesc(a){
+  var descricao = document.getElementById(`desc${a}`);
+  if(descricao.style.display ==="none" ){
+    descricao.style.display = "block"
+  }else{
+    descricao.style.display = "none"
+  }
+}
 //---------------------------------------Slides---------------------------
 var slideIndex = 1;
 showSlides(slideIndex);

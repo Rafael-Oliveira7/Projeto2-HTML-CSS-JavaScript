@@ -145,6 +145,9 @@ div#grid-xp{
     gap: 32px;
     margin-top: 97px;
 }
+div#grid-xp ul{
+    display: none;
+}
 .container-xp{
     display: flex;
     flex-direction: column;
@@ -218,10 +221,22 @@ div#container-valor div#btn-fcurso a{
 }
 
 /*-----------------------------Formatação Quarta Página---------------------------------*/
+.botao-mobile{
+    display: none;
+}
 section#competencias{
     background-image: url(../imagens/teacher\ bnw@2x.png);
     height: 611px;
     background-size: cover
+}
+section#competencias h2{
+    display: none;
+}
+section#competencias .borda{
+    display: none;
+}
+.desc-texto{
+    display: none;
 }
 div#grid-comp{
     display: grid;
@@ -236,7 +251,10 @@ div#container-comp{
     margin-top: 127px;
     height: 362px;
 }
-div#container-comp div{
+.desc-comp{
+    display: none;
+}
+.comp-desktop{
     width: 80%;
     margin-left: 60px;
 }
@@ -669,6 +687,13 @@ form#tenho-interesse{
 }
 /*-------------------------------Responsividade----------------------------------*/
 @media only screen and (max-width: 1000px){
+
+    h2{
+    font-size: clamp(48px, 36px + 2vw, 64px);
+    }
+    h3{
+        font-size: 40px;
+    }
 /*-----------------------------Primeira Página---------------------------*/
     header#pagina-principal{
         height: 569px;
@@ -708,42 +733,35 @@ form#tenho-interesse{
 .borda{
     height: 105px;
     width: 110px;
-    position: absolute;
-    border-top: none;
-    margin-left: 120px;
+    margin-left: 14px;
 }
 section#clientes{
-    background: radial-gradient(circle at 96% 11%,#2c2c2c 0%,#1a1a1a 65%);
-    height: 768px;
+    height: 1789px;
 }
 div#grid-clientes{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
-    margin: 0 auto;
-    gap: 20px;
-}
-div#container-sc{
+    width: 90%;
     display: flex;
     flex-direction: column;
-    margin-top: 123px;
-    margin-left: 47px;
+}
+div#container-sc{
+    margin-top: 43px;
+    margin-left: 10px;
+    position: relative;
 }
 div#container-sc div h2{
     width: 47%;
 }
 div#container-sc div p{
-    width: 63%;
+    width: 99.4%;
 }
 div#container-sc div ul{
-    display: flex;
-    margin-top: 89px;
+    display: none;
 }
 div#grid-xp{
     display: grid;
-    grid-template-columns: 44% 44%;
-    gap: 32px;
-    margin-top: 97px;
+    grid-template-columns: 77%;
+    justify-content: center;
+    margin-top: 30px;
 }
 .container-xp{
     display: flex;
@@ -761,16 +779,214 @@ div#grid-xp{
 .container-xp img{
     width: 100%;
 }
-.container-t{
-    width: 85%;
-    margin-top: 27px;
-}
 .container-t h4{
-    font-size: clamp(10px, 0px + 1vw, 14px);
-    text-transform: uppercase;
-    color: #F89D24;
+    font-size: clamp(14px, 0px + 1vw, 14px);
 }
 .container-t p{
-    font-size: clamp(12px, 2px + 1vw, 16px);
+    font-size: clamp(16px, 2px + 1vw, 16px);
+    font-weight: bold;
 }
+div#grid-xp ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*------------------------------------------ Terceira Página --------------------------------*/
+section#contratar-curso{
+    height: 547px;
+}
+div#grid-contrate{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+div#grid-contrate h3{
+    width: 85%;
+    margin-top: 45px;
+}
+div#container-valor{
+    height: 250px;
+    margin-top: 43px;
+}
+/*------------------------------------------ Quarta Página --------------------------------*/
+section#competencias{
+    height: 100%;
+    background-size: cover;
+    background-position-x: -150px;
+}
+section#competencias h2{
+    display: block;
+    margin-top: 43px;
+    margin-left: 10px;
+    position: relative;
+}
+section#competencias .borda{
+    display: block;
+}
+div#grid-comp{
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+}
+div#container-comp{
+    margin-top: 32px;
+    height: 100%;
+}
+.comp-desktop{
+    display: none;
+}
+.desc-comp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+.seta{
+    color: #fff;
+    font-size: 25px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+.desc-texto{
+    display: none;
+    animation-name: teste;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.desc-texto p{
+    font-size: 18px;
+    margin: 24px auto 24px auto;
+    width: 87%;
+}
+@keyframes teste {
+    0%{
+        
+    }100%{
+    top: 0;
+    background-color: #262626;
+    border-top: 1px solid #F89D24;
+    border-bottom: 1px solid #F89D24;
+    }
+}
+
+div#container-comp-desc{
+    display: none;
+}
+.botao-mobile{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+/*-----------------------------Formatação Quinta Página---------------------------------*/
+section#professores{
+    height: 100%;
+    width: 100%;
+    background: none;
+    background-color: #0C0C0C;
+}
+section#professores h2{
+    margin-left: 24px;
+    margin-bottom: 75px;
+    padding-top: 43px;
+}
+div#grid-professores{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+}
+section#professores ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+    padding-bottom: 80px;
+}
+.container-prof img {
+    margin-left: 24px;
+    margin-bottom: 18px;
+    margin-top: 24px;
+    width: 85%;
+}
+/*-------------------------------------------Slide---------------------------------*/
+section#slide{
+    background-image: url(../imagens/opinion.png);
+    height: 609px;
+    background-size: cover;
+    background-position-x: -280px;
+    padding-bottom: 50px;
+}
+  .prev, .next {
+    display: none;
+  }
+  .dots-slide {
+    margin-top: 0px;
+    text-align: center;
+}
+  .dots {
+      transition: background-color 0.2s ease;
+    }
+  .active, .dots:hover {
+    background-color: #717171;
+  }
+  .active{
+      animation-duration: 0.7s;
+      animation-name: tamanho;
+      animation-fill-mode: forwards;
+  }
+  @keyframes tamanho {
+      from{
+        
+      }to{
+        width: 52px;
+        height: 5px;
+        border-radius: 2px;
+      }
+  }
+ div#container-slide{
+     height: 100%;
+     width: 80%;
+     margin: 0 auto;
+ }
+ div#borda-dir, div#borda-esq{
+     display: none;
+}
+  .texto-Slides{
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 90%;
+  }
+  .texto-Slides cite{
+      margin-top: 0px;
+      font-size: clamp(18px, 0px + 2vw, 30px);
+      text-align: center;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
