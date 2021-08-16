@@ -480,6 +480,7 @@ div#grid-capacidade{
     width: 80%;
     margin: 0 auto;
 }
+
 div#container-cap{
     display: flex;
     flex-direction: column;
@@ -582,7 +583,7 @@ div#container-final ul li{
 /*--------------------------------Modal-------------------------------------*/
 .modal-container{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.74);
     position: fixed;
     top: 0px;
@@ -608,21 +609,20 @@ div#container-final ul li{
     font-family: lato;
 }
 .modal h3{
-    font-size: 38px;  
+    font-size: clamp(28px, 20px + 1vw,);
     text-transform: uppercase;
     color: #F89D24;
     margin-top: 20px;
     margin-bottom: 30px;
 }
 .modal p{
-    font-size: 16px;
     font-weight: lighter;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .modal form input{
     width: 328px;
-    height: 56px;
+    height: clamp(40px, 2px + 4vw, 56px);
     border: 1px solid #F89D24;
     border-radius: 4px;
     font-size: 16px;
@@ -640,7 +640,6 @@ div#container-final ul li{
     height: 16px;
 }
 .modal form label{
-    margin-top: -34px;
     margin-left: 20px;
     color: #E1E1E1;
 }
@@ -696,7 +695,7 @@ form#tenho-interesse{
     }
 /*-----------------------------Primeira Página---------------------------*/
     header#pagina-principal{
-        height: 569px;
+        height: 100%;
     }
     div#logo-p{
         width: 44px;
@@ -712,11 +711,12 @@ form#tenho-interesse{
         width: 80%;
     }
     section#tema h1{
-        font-size: clamp(40px, 30px + 1vw, 54px);
+        font-size: clamp(40px, 29px + 3vw, 54px);
         font-weight: bold;
         line-height: normal;
     }
     section#tema p{
+        font-size: clamp(14px, 10px + 1vw, 18px);
         margin-top: 17px;
         width: 100%;
     }
@@ -724,6 +724,7 @@ form#tenho-interesse{
         flex-direction: column;
         align-items: center;
         margin-top: 35px;
+        padding-bottom: 70px;
     }
     .b.comprar{
         margin-left: 0px;
@@ -736,7 +737,7 @@ form#tenho-interesse{
     margin-left: 14px;
 }
 section#clientes{
-    height: 1789px;
+    height: 100%;
 }
 div#grid-clientes{
     width: 90%;
@@ -758,8 +759,9 @@ div#container-sc div ul{
     display: none;
 }
 div#grid-xp{
-    display: grid;
-    grid-template-columns: 77%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
     justify-content: center;
     margin-top: 30px;
 }
@@ -771,7 +773,7 @@ div#grid-xp{
     border: 1px solid #6E6E6E;
     border-radius: 5px;
     height: 271px;
-    width: 100%;
+    width: 251px;
 }
 .container-xp div.img-logo{
     width: 39%;
@@ -786,10 +788,11 @@ div#grid-xp{
     font-size: clamp(16px, 2px + 1vw, 16px);
     font-weight: bold;
 }
-div#grid-xp ul{
+div#grid-clientes ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 70px;
 }
 /*------------------------------------------ Terceira Página --------------------------------*/
 section#contratar-curso{
@@ -827,9 +830,10 @@ div#grid-comp{
     display: grid;
     grid-template-columns: 90%;
     justify-content: center;
+    gap: 20px;
 }
 div#container-comp{
-    margin-top: 32px;
+    margin-top: 0px;
     height: 100%;
 }
 .comp-desktop{
@@ -894,7 +898,6 @@ section#professores h2{
 div#grid-professores{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
     margin: 0 auto;
     width: 90%;
 }
@@ -904,6 +907,9 @@ section#professores ul{
     align-items: center;
     margin-top: 48px;
     padding-bottom: 80px;
+}
+.container-prof{
+    width: 324px;
 }
 .container-prof img {
     margin-left: 24px;
@@ -988,5 +994,151 @@ section#slide{
     to {
       opacity: 1;
     }
+} 
+  /*---------------------------------Formatação Sétima Página-------------------------*/
+section#capacidade{
+    height: 100%;
+}
+div#grid-capacidade{
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+div#container-cap{
+    margin-top: 43px;
+    margin-left: 24px;
+}
+div#container-cap div ul{
+    display: none;
+}
+div#container-cap div h2{
+    width: 75%;
+}
+div#container-cap div p{
+    width: 95%;
+}
+div#lista-cap{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+}
+.botao-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+/*--------------------------------Ultima Página-------------------------------------*/
+section#negociando{
+    height: 100%;
+    background: url(../imagens/negociando.png)left no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+div#container-neg{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+}
+div#container-neg h2{
+    position: relative;
+    margin-top:47px;
+    width: 238px;
+    margin-bottom:14px;
+    margin-left: 24px;
+}
+div#container-neg p{
+    margin-left: 24px;
+    font-size: clamp(14px, 10px + 1vw, 18px);
+    width: 87%;
+}
+div#container-neg ul{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 52px;
+  margin-bottom: 70px;
+}
+div#container-neg .borda{  
+    left: 0;
   }
+  /*--------------------------------Footer-------------------------------------*/
+footer{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+div#container-final{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 35px auto;
+    
+}
+div#container-final strong{
+    color: #B5B5B5; 
+}
+div#container-final ul{
+    margin-top: 40px;
+    display: flex;
+   justify-content: center;
+    color: #B5B5B5; 
+}
+div#container-final ul li{
+    list-style:  none;
+    margin-right: 10px;
+}
+.mobile{
+    display: none;
+}
+/*--------------------------------Modal-------------------------------------*/
+.modal{
+    min-width: 250px;
+    padding: 20px;
+    width: 80%;
+}
+.modal h3{
+    font-size: clamp(28px, 20px + 3vw, 40px);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.modal p{
+    font-size: clamp(14px, 20px + 3vw, 25px);
+    margin-top: 10px;
+    margin-bottom: 3vh;
+}
+form#tenho-interesse{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 0;
+}
+.modal form input{
+    margin: 0 auto;
+    width: 90%;
+    height: 7vh;
+}
+.modal form input[type = text], .modal form input[type = email]{
+    padding-left: 0;
+}
+.modal form input[type = checkbox]{
+    position: relative;
+}
+.modal form input[type = submit]{
+    width: 80%;
+    height: 7vh;
+    padding-top: 10px;
+}
+.modal form label {
+    margin-left: 10px;
+    position: relative;
+}
+.fechar{
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+}
 }
